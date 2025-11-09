@@ -1,1 +1,19 @@
 # Defect Log
+
+## API-DEF-001
+Title: GET pokemon list returns incorrect count
+Endpoint: GET https://pokeapi.co/api/v2/pokemon?limit=10
+Expected: 10 results
+Actual: 9 results returned
+Severity: Medium
+Status: Open
+Notes: Rare intermittent issue
+
+## API-DEF-002
+Title: POST /posts returns unexpected field
+Endpoint: POST https://jsonplaceholder.typicode.com/posts
+Expected: Response contains id only
+Actual: Response returned extra field "extra_data"
+Severity: Low
+Status: Open
+Notes: Mock defect for demonstration
