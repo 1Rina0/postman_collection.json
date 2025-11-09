@@ -1,0 +1,42 @@
+# API Test Cases
+
+## API-TC-001 — GET pokemon/ditto
+Pre-Conditions: Postman installed; Internet connection
+Request: GET https://pokeapi.co/api/v2/pokemon/ditto
+Expected Result: 
+- Status code = 200
+- name = "ditto"
+Actual Result: PASS
+Notes: Verified via Postman
+
+## API-TC-002 — GET pokemon?limit=10
+Pre-Conditions: Postman installed; Internet connection
+Request: GET https://pokeapi.co/api/v2/pokemon?limit=10
+Expected Result:
+- Status code = 200
+- results count = 10
+Actual Result: PASS
+Notes: Verified via Postman
+
+## API-TC-003 — POST /posts
+Pre-Conditions: Postman installed; Internet connection
+Request: POST https://jsonplaceholder.typicode.com/posts
+Body:
+{
+  "title": "QA test",
+  "body": "This is a test post",
+  "userId": 1
+}
+Expected Result:
+- Status = 201
+- Response contains id
+Actual Result: PASS
+Notes: Verified via Postman
+
+## API-TC-004 — GET invalid pokemon
+Pre-Conditions: Postman installed; Internet connection
+Request: GET https://pokeapi.co/api/v2/pokemon/invalid-pokemon-name
+Expected Result:
+- Status = 404
+Actual Result: PASS
+Notes: Verified via Postman
